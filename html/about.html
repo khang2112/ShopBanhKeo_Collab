@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="vn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế Giới Đồ Ngọt Sweet Cravings</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class="bg-light about-page">
+    <div class="container shadow-sm bg-white p-0">
+      <header class="py-3 border-bottom">
+        <div
+          class="container d-flex align-items-center justify-content-between gap-3 flex-wrap"
+        >
+          <div class="logo">
+            <img
+              src="../assets/img/logo.jpg"
+              alt="Logo"
+              class="img-fluid rounded-circle"
+              width="100"
+            />
+          </div>
+
+          <nav class="navbar navbar-expand-lg p-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="about.html">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="members-ship.html"
+                    >Membership</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-3"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Sản phẩm</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html#socola"
+                        >Socola các loại</a
+                      >
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="products.html#cake"
+                        >Bánh ngọt & Cupcake</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html#keo"
+                        >Kẹo dẻo & Marshmallow</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-2"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Quà tặng</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html#hopqua"
+                        >Hộp quà Socola</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html#gioqua"
+                        >Giỏ quà Bánh kẹo</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="products.html#khuyenmai"
+                    >Đang giảm giá</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="news.html">Thông báo mới</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="d-flex align-items-center gap-3">
+            <form id="searchForm" class="d-none d-md-block">
+              <div class="input-group">
+                <input
+                  id="search-inp"
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Tìm bánh, kẹo, socola..."
+                />
+                <button class="btn btn-danger btn-sm" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <div class="dropdown">
+              <a
+                class="text-danger dropdown-toggle text-decoration-none"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.832 1.664C2.154 12.333 2.001 13.078 2 13.324z"
+                  />
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                <li>
+                  <a class="dropdown-item" href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Đăng ký</a>
+                </li>
+              </ul>
+            </div>
+
+            <!--  GIỎ HÀNG -->
+            <a
+              class="text-danger position-relative text-decoration-none"
+              href="cart.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                />
+              </svg>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.65rem"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="container py-5 about-section">
+        <h2 class="text-center fw-bold mb-4">VỀ CHÚNG TÔI</h2>
+
+        <p class="text-center mb-5" style="color: #555; line-height: 1.7">
+          Sweet Cravings không chỉ mang đến những món bánh kẹo thơm ngon mà còn
+          tạo nên những khoảnh khắc ngọt ngào trong cuộc sống. Chúng tôi luôn
+          chú trọng chất lượng, trải nghiệm và cảm xúc của khách hàng trong từng
+          sản phẩm. Dưới đây là những giá trị cốt lõi làm nên thương hiệu của
+          chúng tôi.
+        </p>
+
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="about-box text-center p-4 h-100">
+              <div class="about-icon mb-3">🍬</div>
+              <h6 class="fw-bold mb-2">Sứ mệnh</h6>
+              <p class="small text-muted">
+                Mang đến những sản phẩm bánh kẹo chất lượng, lan tỏa niềm vui và
+                sự ngọt ngào đến mọi người.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="about-box text-center p-4 h-100">
+              <div class="about-icon mb-3">🍫</div>
+              <h6 class="fw-bold mb-2">Chất lượng</h6>
+              <p class="small text-muted">
+                Nguyên liệu an toàn, quy trình đảm bảo vệ sinh, tạo nên những
+                hương vị thơm ngon và đáng tin cậy.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="about-box text-center p-4 h-100">
+              <div class="about-icon mb-3">🎁</div>
+              <h6 class="fw-bold mb-2">Giá trị</h6>
+              <p class="small text-muted">
+                Mỗi sản phẩm không chỉ là món ăn mà còn là món quà tinh thần kết
+                nối cảm xúc và yêu thương.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="about-box text-center p-4 h-100">
+              <div class="about-icon mb-3">💖</div>
+              <h6 class="fw-bold mb-2">Đội ngũ</h6>
+              <p class="small text-muted">
+                Trẻ trung, sáng tạo và luôn cải tiến để mang lại trải nghiệm tốt
+                nhất cho khách hàng.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEAM -->
+        <h4 class="text-center fw-bold mb-4">ĐỘI NGŨ CỦA CHÚNG TÔI</h4>
+
+        <div class="row g-4">
+          <!-- MEMBER -->
+          <div class="col-md-3 col-6">
+            <div class="card text-center border-0 p-3 h-100 team-card">
+              <img
+                src="../assets/img/avatar/trumne.jpg"
+                class="rounded-circle mx-auto mb-3"
+                width="100"
+                height="100"
+                style="object-fit: cover"
+              />
+              <h6 class="fw-bold">Nguyễn Dương Khang</h6>
+              <p class="text-muted small">24732091</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card text-center border-0 p-3 h-100 team-card">
+              <img
+                src="../assets/img/avatar/catbkla.png.webp"
+                class="rounded-circle mx-auto mb-3"
+                width="100"
+                height="100"
+                style="object-fit: cover"
+              />
+              <h6 class="fw-bold">Đào Gia Huy</h6>
+              <p class="text-muted small">24708481</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card text-center border-0 p-3 h-100 team-card">
+              <img
+                src="../assets/img/avatar/eto.jpg"
+                class="rounded-circle mx-auto mb-3"
+                width="100"
+                height="100"
+                style="object-fit: cover"
+              />
+              <h6 class="fw-bold">Lê Ngọc Quỳnh Hương</h6>
+              <p class="text-muted small">24713011</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card text-center border-0 p-3 h-100 team-card">
+              <img
+                src="../assets/img/avatar/tuk.jpg"
+                class="rounded-circle mx-auto mb-3"
+                width="100"
+                height="100"
+                style="object-fit: cover"
+              />
+              <h6 class="fw-bold">Nguyễn Ngọc Uyển Thanh</h6>
+              <p class="text-muted small">24703531</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card text-center border-0 p-3 h-100 team-card">
+              <img
+                src="../assets/img/avatar/catcat.jpg"
+                class="rounded-circle mx-auto mb-3"
+                width="100"
+                height="100"
+                style="object-fit: cover"
+              />
+              <h6 class="fw-bold">Đỗ Thị Kiều Trang</h6>
+              <p class="text-muted small">24703861</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card text-center border-0 p-3 h-100 team-card">
+              <img
+                src="../assets/img/avatar/dui.jpg"
+                class="rounded-circle mx-auto mb-3"
+                width="100"
+                height="100"
+                style="object-fit: cover"
+              />
+              <h6 class="fw-bold">Trần Ngọc Hồng Uyên</h6>
+              <p class="text-muted small">24694481</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card text-center border-0 p-3 h-100 team-card">
+              <img
+                src="../assets/img/avatar/meme-Shiba-36.jpg"
+                class="rounded-circle mx-auto mb-3"
+                width="100"
+                height="100"
+                style="object-fit: cover"
+              />
+              <h6 class="fw-bold">Lê Thị Kim Vui</h6>
+              <p class="text-muted small">24671971</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card text-center border-0 p-3 h-100 team-card">
+              <img
+                src="../assets/img/avatar/capyyyyy.jpg"
+                class="rounded-circle mx-auto mb-3"
+                width="100"
+                height="100"
+                style="object-fit: cover"
+              />
+              <h6 class="fw-bold">Lê Thanh Vân</h6>
+              <p class="text-muted small">24692521</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="mt-5 pt-5 pb-3 bg-light"
+        style="border-top: solid 5px #d81b60"
+      >
+        <div class="container px-4">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+              <img
+                src="../assets/img/logo.jpg"
+                width="140"
+                alt="Sweet Cravings Logo"
+                class="rounded-circle"
+              />
+            </div>
+            <div class="col-md-8">
+              <div
+                class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-end gap-3"
+              >
+                <h5 class="m-0 fw-bold" style="color: #d81b60">
+                  ĐĂNG KÝ NHẬN TIN
+                </h5>
+                <div class="input-group" style="max-width: 350px">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Nhập email của bạn"
+                  />
+                  <button class="btn btn-danger text-light">Đăng ký</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row pt-3">
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">VỀ CHÚNG TÔI</h6>
+              <p class="small text-muted">
+                Đây là sốp bánh kẹo trá hình có đầu tư lớn
+              </p>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">
+                LIÊN KẾT NHANH
+              </h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2">
+                  <a href="about.html" class="text-decoration-none text-muted"
+                    >Về chúng tôi</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                    >Sản phẩm</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#rickRollModal"
+                    class="text-decoration-none text-muted"
+                    >Chăm sóc khách hàng</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="sitemap.html" class="text-decoration-none text-muted"
+                    >Sơ đồ Website (Sitemap)</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">DANH MỤC</h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2">
+                  <a
+                    href="products.html#socola"
+                    class="text-decoration-none text-muted"
+                    >Socola Nghệ Thuật</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html#cake"
+                    class="text-decoration-none text-muted"
+                    >Bánh Ngọt & Cupcake</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="news.html" class="text-decoration-none text-muted"
+                    >Tin tức & Blog</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html#khuyenmai"
+                    class="text-decoration-none text-muted"
+                    >Flash Sale Đồ Ngọt</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4 small text-muted">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">LIÊN HỆ</h6>
+              <p class="mb-2">
+                📍 số 12 Nguyễn Văn Bảo,Phường Hạnh Thông, quận Gò Vấp, TP.HCM
+              </p>
+              <p class="mb-2">📞 0123 456 JQK - 0987 654 KQJ</p>
+              <p class="mb-2">✉️ jqk.iuh.edu.vn</p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="text-center small text-muted pt-2">
+            <p class="mb-0">Copyright © 2026 Spark. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- chăm sóc khách hàng -->
+    <div class="modal fade" id="rickRollModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-danger" style="border-width: 3px">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold text-danger">
+              📢 THÔNG BÁO TỪ TỔNG ĐÀI
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center p-4">
+            <img
+              src="../assets/img/customerservice.png"
+              class="img-fluid rounded shadow-sm mb-3"
+              alt="Please wait"
+            />
+
+            <h5 class="fw-bold text-secondary">Hệ thống đang bận...</h5>
+            <p class="text-muted small">
+              Vui lòng chờ trong khi chuyên viên của chúng tôi đang đi mua bánh
+              kẹo. Xin cảm ơn!
+            </p>
+
+            <div class="progress mt-3" style="height: 10px">
+              <div
+                class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                role="progressbar"
+                style="width: 99%"
+              ></div>
+            </div>
+            <small class="text-muted mt-2 d-block">Đang tải... 99%</small>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger text-white w-100"
+              data-bs-dismiss="modal"
+            >
+              Đã hiểu
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

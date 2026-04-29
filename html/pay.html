@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thanh toán</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/pay.css" />
+  </head>
+
+  <body>
+    <div class="header">Thanh toán</div>
+
+    <!-- THÔNG TIN NGƯỜI NHẬN -->
+    <div
+      class="card-custom"
+      data-bs-toggle="modal"
+      data-bs-target="#addressModal"
+      style="cursor: pointer"
+    >
+      <div class="d-flex justify-content-between">
+        <span class="title">📍 Thông tin người nhận</span>
+      </div>
+      <div class="mt-2">
+        <b>Chưa có địa chỉ</b>
+        <br />
+        <span class="small-text">Nhấn để thêm</span>
+      </div>
+    </div>
+
+    <!-- SẢN PHẨM -->
+    <div class="card-custom">
+      <div class="d-flex justify-content-between">
+        <span class="title">Chi tiết sản phẩm</span>
+        <span
+          data-bs-toggle="modal"
+          data-bs-target="#noteModal"
+          style="cursor: pointer"
+        >
+          Thêm ghi chú
+        </span>
+      </div>
+      <div id="checkout-items-container" class="mt-3"></div>
+    </div>
+
+    <!-- VOUCHER -->
+    <div
+      class="card-custom d-flex justify-content-between"
+      data-bs-toggle="modal"
+      data-bs-target="#voucherModal"
+      style="cursor: pointer"
+    >
+      <span class="title">🎟 Giảm giá của Shop</span>
+      <span>Chọn voucher ›</span>
+    </div>
+
+    <!-- PHƯƠNG THỨC THANH TOÁN -->
+    <div class="card-custom">
+      <div class="title mb-2">Phương thức thanh toán</div>
+
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span>💳 Chuyển khoản</span>
+        <input type="radio" name="payment" value="bank" checked />
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <span>💵 Thanh toán khi nhận hàng</span>
+        <input type="radio" name="payment" value="cod" />
+      </div>
+    </div>
+
+    <!-- CHI TIẾT THANH TOÁN -->
+    <div class="card-custom">
+      <div class="title mb-3">Chi tiết thanh toán</div>
+
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-muted">Tiền hàng</span>
+        <span id="checkout-subtotal" class="fw-medium">0đ</span>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-muted">Phí vận chuyển</span>
+        <span id="checkout-shipping" class="fw-medium">35.000đ</span>
+      </div>
+
+      <div
+        id="discount-row"
+        class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom text-success d-none"
+      >
+        <span>Mã giảm giá</span>
+        <span id="checkout-discount" class="fw-medium">-0đ</span>
+      </div>
+
+      <div
+        class="d-flex justify-content-between align-items-center fw-bold fs-5"
+      >
+        <span>Tổng thanh toán</span>
+        <span id="checkout-total" class="text-danger">0đ</span>
+      </div>
+    </div>
+
+    <div class="bottom-bar d-flex justify-content-between align-items-center">
+      <div>
+        <div class="small-text text-muted mb-1">Tổng thanh toán</div>
+        <div id="bottom-total" class="fw-bold text-danger fs-5">0đ</div>
+      </div>
+
+      <button
+        id="btn-confirm-pay"
+        class="btn btn-main px-5 py-2 fw-bold rounded-pill"
+      >
+        MUA NGAY
+      </button>
+    </div>
+    
+    <!-- ================= MODAL ================= -->
+    <!-- MODAL ĐỊA CHỈ -->
+    <div class="modal fade" id="addressModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Thêm địa chỉ</h5>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              id="ten-nguoi-nhan"
+              class="form-control mb-2"
+              placeholder="Họ và tên"
+            />
+
+            <input
+              type="tel"
+              id="sdt-nguoi-nhan"
+              class="form-control mb-2"
+              placeholder="Số điện thoại"
+            />
+
+            <select id="tinh" class="form-select mb-2">
+              <option value="">Chọn Tỉnh / Thành</option>
+            </select>
+
+            <select id="quan" class="form-select mb-2">
+              <option value="">Chọn Quận / Huyện</option>
+            </select>
+
+            <select id="phuong" class="form-select mb-2">
+              <option value="">Chọn Phường / Xã</option>
+            </select>
+
+            <input
+              type="text"
+              id="so-nha"
+              class="form-control"
+              placeholder="Số nhà, đường"
+            />
+          </div>
+
+          <div class="modal-footer d-flex justify-content-between">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Hủy bỏ
+            </button>
+            <button class="btn btn-danger">Thêm địa chỉ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- GHI CHÚ -->
+    <div class="modal fade" id="noteModal">
+      <div class="modal-dialog modal-dialog-bottom">
+        <div class="modal-content p-3">
+          <h5>Ghi chú đơn hàng</h5>
+          <textarea
+            class="form-control"
+            rows="4"
+            placeholder="Nhập ghi chú..."
+          ></textarea>
+
+          <div class="d-flex justify-content-end mt-3">
+            <button class="btn btn-secondary me-2" data-bs-dismiss="modal">
+              Đóng
+            </button>
+            <button class="btn btn-main">Lưu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOUCHER -->
+    <div class="modal fade" id="voucherModal">
+      <div class="modal-dialog modal-dialog-bottom">
+        <div class="modal-content p-3">
+          <h5>Ưu đãi</h5>
+          <input id="voucher-input" class="form-control mt-2" placeholder="Nhập mã ưu đãi" />
+
+          <div class="d-flex justify-content-end mt-3">
+            <button class="btn btn-secondary me-2" data-bs-dismiss="modal">
+              Đóng
+            </button>
+            <button id="btn-apply-voucher" class="btn btn-main">Áp dụng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--MODAL THANH TOAN CHUYEN KHOAN-->
+    <div class="modal fade" id="qrModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-3">
+          <h5>Quét mã QR để thanh toán</h5>
+          <img
+            src="../assets/img/qrcode-demo.jpg"
+            class="d-block mx-auto"
+            style="width: 200px"
+          />
+
+          <button class="btn btn-secondary mt-3" data-bs-dismiss="modal">
+            Đóng
+          </button>
+
+          <button id="btn-paid" class="btn btn-success mt-3">
+            Đã thanh toán
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="../js/main.js"></script>
+    <script src="../js/pay.js"></script>
+  </body>
+</html>
